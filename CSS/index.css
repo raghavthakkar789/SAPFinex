@@ -9,12 +9,19 @@
     color: #333;
     line-height: 1.6;
     background-color: #fdfdfd;
+    padding-top: 0;
   }
   
   /* ----- Navbar ----- */
   header {
     background: #003366;
     color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
   .navbar {
     display: flex;
@@ -49,6 +56,7 @@
     position: relative;
     text-align: center;
     padding: 4rem 1rem;
+    padding-top: calc(4rem + 80px);
     background: url('./hero_background.jpg') no-repeat center/cover;
     color: #fff;
     margin-bottom: 0;
@@ -214,5 +222,24 @@ li {
       border-top: 1px solid #555;
     }
 
+  /* Update the company-intro section styles */
+  #company-intro {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem 4rem;
+    text-align: justify;
+  }
+
+  #company-intro p {
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: #444;
+  }
+
+  #company-intro h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
   
   

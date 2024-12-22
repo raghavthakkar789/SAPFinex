@@ -8,12 +8,19 @@
     font-family: Arial, sans-serif;
     color: #333;
     background-color: #f9f9f9;
+    padding-top: 0;
   }
   
   /* ----- Navbar ----- */
   header {
     background: #003366;
     color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
   .navbar {
     display: flex;
@@ -48,13 +55,18 @@
   
   /* ----- Services Intro ----- */
   .services-intro {
-    padding: 4rem 2rem;
+    padding: 8rem 2rem;
     position: relative;
     text-align: center;
     color: white;
     background: url('./hero_background.jpg') no-repeat center/cover;
     background-size: cover;
-    min-height: 300px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0;
+    padding-top: calc(4rem + 60px);
   }
   
   /* Add overlay to darken the background */
@@ -76,17 +88,17 @@
   }
   
   .services-intro h1 {
-    margin-bottom: 1.5rem;
-    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    font-size: 3.5rem;
     font-weight: 600;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   }
   
   .services-intro p {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     max-width: 800px;
     margin: 0 auto;
-    line-height: 1.6;
+    line-height: 1.8;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   }
   
