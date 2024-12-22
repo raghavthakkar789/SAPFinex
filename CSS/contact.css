@@ -220,3 +220,24 @@
     border-top: 1px solid #555;
   }
   
+  /* Add these to your existing CSS */
+  .form-group input[type="tel"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group input[type="tel"]:focus {
+    outline: none;
+    border-color: #003366;
+    box-shadow: 0 0 0 2px rgba(0, 51, 102, 0.1);
+  }
+  
+  /* Optional: Add invalid state styling */
+  .form-group input:invalid {
+    border-color: #ff6b6b;
+  }
+  

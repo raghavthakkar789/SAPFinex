@@ -21,3 +21,11 @@ contactForm.addEventListener('submit', (event) => {
     alert('Please fill in all required fields.');
   }
 });
+
+// Add phone number validation
+const phoneInput = document.getElementById('phone');
+phoneInput.addEventListener('input', (e) => {
+  const value = e.target.value;
+  // Remove any characters that aren't numbers, spaces, dashes, plus signs, or parentheses
+  e.target.value = value.replace(/[^\d\s\-+()]/g, '');
+});

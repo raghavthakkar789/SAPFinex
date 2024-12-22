@@ -53,7 +53,7 @@ header {
   padding-top: calc(4rem + 120px);
   background: url('./hero_background.jpg') no-repeat center/cover;
   color: #fff;
-  margin-bottom: 0;
+  /* margin-bottom: 0; */
   margin-top: 100px;
   height: 50vh;
 }
@@ -117,41 +117,53 @@ body {
 
 .social-links {
   display: flex;
-  gap: 10px;
-  justify-content: flex-end;
+  gap: 12px;
+  align-items: center;
 }
 
 .social-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
-  background-color: #0056b3;
   color: white;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .social-btn:hover {
-  background-color: #003d7a;
+  transform: translateY(-2px);
+  opacity: 0.9;
 }
 
-/* Specific colors for each social platform (optional) */
-.social-btn .fa-linkedin {
-  background-color: #0077b5;
+/* Specific brand colors */
+.social-btn.home {
+  background: #003366;
 }
 
-.social-btn .fa-x-twitter {
-  background-color: #000000;
+.social-btn.linkedin {
+  background: #0077b5;
 }
 
-.social-btn .fa-youtube {
-  background-color: #ff0000;
+.social-btn.twitter {
+  background: #000000;
 }
 
-.social-btn .fa-comment,
-.social-btn .fa-home {
-  background-color: #0056b3;
+.social-btn.youtube {
+  background: #ff0000;
+}
+
+.social-btn.feedback {
+  background: #0056b3;
+}
+
+.social-btn i {
+  font-size: 16px;
+}
+
+/* Home icon */
+.social-btn:first-child {
+  background: #003366;
 } 
