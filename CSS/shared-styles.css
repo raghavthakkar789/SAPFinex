@@ -46,6 +46,18 @@ header {
   padding: 10px 20px;
 }
 
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 4rem 1rem;
+  padding-top: calc(4rem + 120px);
+  background: url('./hero_background.jpg') no-repeat center/cover;
+  color: #fff;
+  margin-bottom: 0;
+  margin-top: 100px;
+  height: 50vh;
+}
+
 /* Adjust body padding to account for the taller header */
 body {
   padding-top: 100px;
@@ -106,6 +118,7 @@ body {
 .social-links {
   display: flex;
   gap: 10px;
+  justify-content: flex-end;
 }
 
 .social-btn {

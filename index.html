@@ -78,8 +78,8 @@
     /* make the logo transparent */
     /* mix-blend-mode: difference; */
   }
+  
   .contact-info {
-    contact-info {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
@@ -113,23 +113,6 @@
           <span class="separator">|</span>
           <img src="./CSS/mail_logo.svg" alt="Email" class="email-icon">
           <span>Pankaj.Thakker@sapfinex.com</span>
-          <div class="social-links">
-            <a href="https://www.linkedin.com/company/sapfinex-inc/about/" target="_blank" class="social-btn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://x.com/SAPfinex" target="_blank" class="social-btn">
-              <i class="fab fa-x-twitter"></i>
-            </a>
-            <a href="https://www.youtube.com/@SAPfinex" target="_blank" class="social-btn">
-              <i class="fab fa-youtube"></i>
-            </a>
-            <a href="contact.html" class="social-btn">
-              <i class="fas fa-comment"></i>
-            </a>
-            <a href="index.html" class="social-btn">
-              <i class="fas fa-home"></i>
-            </a>
-          </div>
         </div>
       </div>
       
@@ -143,24 +126,43 @@
         <li><a href="about.html">About Us</a></li>
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
+      <div class="social-links">
+        <a href="index.html" class="social-btn">
+          <i class="fas fa-home"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/sapfinex-inc/about/" target="_blank" class="social-btn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://x.com/SAPfinex" target="_blank" class="social-btn">
+          <i class="fab fa-x-twitter"></i>
+        </a>
+        <a href="https://www.youtube.com/@SAPfinex" target="_blank" class="social-btn">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="contact.html" class="social-btn">
+          <i class="fas fa-comment"></i>
+        </a>
+      </div>
     </nav>
   </header>
 
   <!-- Hero Section -->
   <div class="hero">
-    <!-- add a back arrow -->
-    <!-- <div class="back-arrow">&#8592;</div> -->
-    <!-- slyding text -->
+    <button class="arrow prev-arrow" onclick="prevText()">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    
     <div class="sliding-text hero-text">
-      
       <h2 id="text1"><font size="6"><strong>Driving Business Success through SAP Expertise</strong><br> With Excellence, Speed, and Synergy.</font></h2>
       <h2 id="text2"><font size="6"><strong>Simplifying Complex SAP Solutions to Unlock Rapid Business Growth.</strong></font></h2>
       <h2 id="text3"><font size="6"><strong>Your Trusted Partner in SAP Solutions and Transformational Business Journeys.</strong></font></h2>
       <h2 id="text4"><font size="6"><strong>Innovate, Integrate, and Accelerate with Proven SAP</strong><br>Certified Excellence.</font></h2>
       <h2 id="text5"><font size="6"><strong>Comprehensive SAP Design &amp; Support for Efficient Operations and Sustainable Growth.</strong></font></h2>
     </div>
-    <!-- add a forward arrow -->
-    <!-- <div class="forward-arrow">&#8594;</div> -->
+
+    <button class="arrow next-arrow" onclick="nextText()">
+      <i class="fas fa-chevron-right"></i>
+    </button>
   </div>
 
   <section id="company-intro">
@@ -184,6 +186,16 @@
   <!-- Footer -->
   <footer>
     <div class="footer-content">
+      <div class="footer-section">
+        <h3>INDIA Office</h3>
+        <p>E - 803</p>
+        <p>Rosewood Estate Opp Prernatirth bunglows.</p>
+        <p>Jodhpur Gam ,Satellite. Ahmedabad</p>
+        <p>380015 - Gujarat, India</p>
+        <p>Phone: +91 7878 76 3738</p>
+        <p>Email: Pankaj.Thakker@sapfinex.com</p>
+      </div>
+
       <div class="footer-section">
         <h3>US Office</h3>
         <p>SAPFINEX INC</p>
@@ -211,12 +223,25 @@
   const texts = document.querySelectorAll('.sliding-text h2');
   let currentText = 0;
 
-  function slideText() {
-    texts[currentText].style.display = 'none';
-    currentText = (currentText + 1) % texts.length;
-    texts[currentText].style.display = 'block';
+  function showText(index) {
+    texts.forEach(text => text.style.display = 'none');
+    texts[index].style.display = 'block';
   }
-  setInterval(slideText, 3500);
-  slideText();
+
+  function nextText() {
+    currentText = (currentText + 1) % texts.length;
+    showText(currentText);
+  }
+
+  function prevText() {
+    currentText = (currentText - 1 + texts.length) % texts.length;
+    showText(currentText);
+  }
+
+  // Initial display
+  showText(currentText);
+
+  // Auto-slide every 3.5 seconds
+  var textInterval = setInterval(nextText, 3500);
 </script>
 </html>

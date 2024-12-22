@@ -57,10 +57,12 @@
     position: relative;
     text-align: center;
     padding: 4rem 1rem;
-    padding-top: calc(4rem + 80px);
+    padding-top: calc(4rem + 120px);
     background: url('./hero_background.jpg') no-repeat center/cover;
     color: #fff;
     margin-bottom: 0;
+    margin-top: 100px;
+    height: 50vh;
   }
 
   /* Add overlay to darken the background */
@@ -242,5 +244,37 @@ li {
     text-align: center;
     margin-bottom: 2rem;
   }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 3;
+    transition: background 0.3s ease;
+  }
+
+  .arrow:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .prev-arrow {
+    left: 20px;
+  }
+
+  .next-arrow {
+    right: 20px;
+  }
+
+  /* Ensure the hero has relative positioning */
+  /* .hero {
+    position: relative;
+  } */
   
   

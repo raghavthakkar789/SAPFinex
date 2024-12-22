@@ -58,7 +58,9 @@
     background: url('./hero_background.jpg') no-repeat center center;
     background-size: cover;
     min-height: 300px;
+    margin-top: 100px;
   }
+
   
   .insight-hero::before {
     content: '';
