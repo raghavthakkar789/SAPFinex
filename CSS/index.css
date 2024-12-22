@@ -83,6 +83,23 @@
     margin: 0.5rem 0;
     font-weight: normal;
   }
+  .company-intro{
+    h2{
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 2rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #003366;
+    }
+  }
+
+  .company-intro p {
+    width: 700px;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    color: #444;
+  }
 
   .services {
     max-width: 800px;
