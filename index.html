@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAPfinex - Home</title>
+  <link rel="stylesheet" href="css/index.css" />
+  <script defer src="js/index.js"></script>
+</head>
+<style>
+  /* hero section */
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+  }
+  .hero-text h2 {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+  }
+  /* back arrow */
+
+  .back-arrow {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .forward-arrow {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .sliding-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    width: 100%;
+  }
+  .sliding-text h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    display: none;
+    /* the text width is too small for the content */
+    width: 100%;
+    /* the text should be in the center of the screen */
+  }
+
+
+</style>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">SAPfinex</div>
+      <div class="nav-toggle" id="navToggle">&#9776;</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="insight.html">Insight</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <!-- add a back arrow -->
+    <!-- <div class="back-arrow">&#8592;</div> -->
+    <!-- slyding text -->
+    <div class="sliding-text hero-text">
+      
+      <h2 id="text1">Driving Business Success through SAP Expertise — With Excellence, Speed, and Synergy.</h2>
+      <h2 id="text2"><font size="6">Simplifying Complex SAP Solutions to Unlock Rapid Business Growth.</font></h2>
+      <h2 id="text3"><font size="6">Your Trusted Partner in SAP Solutions and Transformational Business Journeys.</font></h2>
+      <h2 id="text4"><font size="6">Innovate, Integrate, and Accelerate with Proven SAP-Certified Excellence.</font></h2>
+      <h2 id="text5"><font size="6"></font>Comprehensive SAP Design &amp; Support for Efficient Operations and Sustainable Growth.</font></h2>
+    </div>
+    <!-- add a forward arrow -->
+    <!-- <div class="forward-arrow">&#8594;</div> -->
+  </div>
+
+  <section id="company-intro">
+    <ul>
+      <li><strong><font color="blue" size="6">Company Introduction</font></strong></li>
+      <li>Revered as the “knowledge nucleus” in SAP teams, we consistently exceed expectations. Beyond what you believed possible, we deliver unmatched solutions that drive business success.</li>
+      <li>Our mission is to empower businesses through innovative SAP solutions, ensuring seamless integration and sustainable growth.</li>
+      <li>We unlock groundbreaking opportunities through problem-solving capabilities that combine data-driven strategies with innovative thinking.</li>
+      <li>We are a team of experienced SAP professionals who are dedicated to providing the best solutions for your business.</li>
+    </ul>
+  </section>
+
+  <!-- <img src="./CSS/sap-img.png" alt="SAP-Image" style="width: 100%; height: auto;"> -->
+
+  <section class="services">
+    <p><font color="blue" size="6"><strong>Our Services</strong></font></p>
+    <ul>
+        <li><strong>SAP Implementation:</strong> Seamless integration of SAP systems into your existing infrastructure.</li>
+        <li><strong>SAP Consulting:</strong> Expert advice to maximize the value of your SAP investments.</li>
+        <li><strong>SAP Support & Maintenance:</strong> Ongoing assistance to ensure your SAP systems run smoothly.</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>US Office</h3>
+        <p>SAPFINEX INC</p>
+        <p>99 WALL ST STE 1079</p>
+        <p>NEW YORK, NY 10005, US</p>
+        <p>Phone: +1 917 672 6721</p>
+        <p>Email: Pankaj.Thakker@sapfinex.com</p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Canada Office</h3>
+        <p>3218 Munson Crescent</p>
+        <p>Burlington, ON L7M 0C2</p>
+        <p>Canada</p>
+        <p>Phone: +1 450 523 0043</p>
+        <p>Email: Pankaj.Thakker@sapfinex.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 SAPfinex. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+<script>
+  const texts = document.querySelectorAll('.sliding-text h2');
+  let currentText = 0;
+
+  function slideText() {
+    texts[currentText].style.display = 'none';
+    currentText = (currentText + 1) % texts.length;
+    texts[currentText].style.display = 'block';
+  }
+  setInterval(slideText, 3500);
+  slideText();
+</script>
+</html>
