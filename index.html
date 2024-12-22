@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SAPfinex - Home</title>
   <link rel="stylesheet" href="./CSS/index.css" />
+  <link rel="stylesheet" href="./CSS/shared-styles.css" />
   <script defer src="./JS/index.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <style>
   /* hero section */
@@ -66,13 +68,73 @@
     /* the text should be in the center of the screen */
   }
 
+  .company-logo {
+    width: 200px;
+    height: auto;
+    /* move the logo to the right */
+    /* float: right; */
+    /* image has black text add some thing to make it visible with blue background */
+    /* filter: brightness(80); */
+    /* make the logo transparent */
+    /* mix-blend-mode: difference; */
+  }
+  .contact-info {
+    contact-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: space-between;
+  }
+
+.logo {
+  margin-left: 10px;
+  height: 0;
+}
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
 
 </style>
 <body>
   <!-- Navigation -->
   <header>
+    <div class="top-bar">
+      <div class="contact-info">
+        <div class="logo">
+          <img src="./CSS/logo.png" alt="SAPfinex Logo" class="company-logo">
+        </div>
+        <div>
+          <img src="./CSS/phone_logo.svg" alt="Phone" class="phone-icon">
+          <span>+1 917 672 6721</span>
+          <span class="separator">|</span>
+          <img src="./CSS/mail_logo.svg" alt="Email" class="email-icon">
+          <span>Pankaj.Thakker@sapfinex.com</span>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/company/sapfinex-inc/about/" target="_blank" class="social-btn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://x.com/SAPfinex" target="_blank" class="social-btn">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="https://www.youtube.com/@SAPfinex" target="_blank" class="social-btn">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="contact.html" class="social-btn">
+              <i class="fas fa-comment"></i>
+            </a>
+            <a href="index.html" class="social-btn">
+              <i class="fas fa-home"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
     <nav class="navbar">
-      <div class="logo">SAPfinex</div>
       <div class="nav-toggle" id="navToggle">&#9776;</div>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
