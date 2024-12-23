@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SAPfinex - Insight</title>
-  <link rel="stylesheet" href="./CSS/insight.css" />
+  <title>SAPfinex - Contact Us</title>
+  <link rel="stylesheet" href="./CSS/contact.css" />
   <link rel="stylesheet" href="./CSS/shared-styles.css" />
-  <script defer src="./JS/insight.js"></script>
+  <script defer src="./JS/contact.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -59,39 +59,69 @@
 
   <!-- Main Content -->
   <main>
-    <section class="insight-hero">
-      <h1>Insight</h1>
-      <p>Explore blogs, case studies, and leadership thoughts for deeper SAP insights.<br><strong> Stay Tuned for Updates!</strong></p>
+    <section class="contact-hero">
+      <h1>Contact Us</h1>
+      <p>We look forward to hearing from you!</p>
     </section>
 
-    <section class="insight-content">
-      <div class="blogs">
-        <h2>Blogs</h2>
-        <p>
-          Stay up to date with the latest trends, best practices, and innovations
-          in SAP and enterprise solutions. Our blog covers a wide range of topics
-          including SAP updates, finance transformation, data analytics, and more.
-        </p>
-        <!-- Placeholder for future blog links -->
-      </div>
+    <section class="contact-form-section">
+      <div class="form-wrapper">
+        <h2>Apply for a Position</h2>
+        <form id="careerForm">
+          <div class="form-group">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" required />
+          </div>
 
-      <div class="case-studies">
-        <h2>Case Studies</h2>
-        <p>
-          Discover how SAPfinex has helped organizations across various industries
-          overcome challenges and achieve their business goals. Our case studies 
-          provide real-world examples of successful SAP implementations and 
-          optimizations.
-        </p>
-        <!-- Placeholder for future case study links -->
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" 
+              pattern="[0-9+\s-()]+" 
+              title="Please enter a valid phone number" />
+          </div>
+
+          <div class="form-group">
+            <label for="organization">Organization</label>
+            <input type="text" id="organization" name="organization" />
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <div class="resume-upload-section">
+            <p class="upload-text">Please upload your resume (PDF, DOC, or DOCX format, max 5MB)</p>
+            <div class="upload-button-wrapper">
+              <label for="resume" class="resume-upload-btn">
+                <i class="fas fa-upload"></i> Upload Resume
+              </label>
+              <input type="file" 
+                     id="resume" 
+                     name="resume" 
+                     accept=".pdf,.doc,.docx"
+                     style="display: none;"
+                     required />
+              <span id="file-chosen">No file chosen</span>
+            </div>
+          </div>
+
+          <button type="submit">Submit Application</button>
+        </form>
       </div>
     </section>
   </main>
 
   <!-- Footer -->
+  <!-- Footer -->
   <footer>
     <div class="footer-content">
-      
+
       
       <div class="footer-section">
         <h3>US Office</h3>
@@ -110,6 +140,7 @@
         <p>Phone: +1 450 523 0043</p>
         <p>Email: Pankaj.Thakker@sapfinex.com</p>
       </div>
+      
       <div class="footer-section">
         <h3>India Office</h3>
         <p>E - 803</p>
@@ -119,7 +150,7 @@
         <p>Phone: +91 7878 76 3738 (Whatsapp only)</p>
         <p>Email: Pankaj.Thakker@sapfinex.com</p>
       </div>
-      </div>
+    </div>
     <div class="footer-bottom">
       <p>&copy; 2024 SAPfinex. All rights reserved.</p>
     </div>

@@ -37,6 +37,8 @@
   .nav-links {
     list-style: none;
     display: flex;
+    gap: 30px;
+    margin-top: 30px;
   }
   .nav-links li {
     margin-left: 1.5rem;
@@ -62,7 +64,7 @@
     color: #fff;
     /* margin-bottom: 0; */
     margin-top: 100px;
-    height: 50vh;
+    height: 60vh;
   }
 
   /* Add overlay to darken the background */

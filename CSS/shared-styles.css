@@ -14,7 +14,7 @@
   font-size: 14px;
   /* margin-left: auto; */
   text-align: right;
-  width: 100%;
+  width: 200%;
 }
 
 .contact-info .phone-icon,
@@ -22,6 +22,7 @@
   height: 16px;
   width: auto;
   margin-right: 1rem;
+  mix-blend-mode: difference;
 }
 
 .contact-info .separator {
@@ -83,13 +84,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 10px;  /* Space after contact info */
-  border-top: 1px solid #eee;  /* Optional: adds a subtle line between sections */
+  padding-top: 10px;
+  margin-top: 10px;
+  /* Space after contact info */
+  /* border-top: 1px solid #eee;  Optional: adds a subtle line between sections */
 }
 
+
 .company-logo {
-  height: 50px;
-  width: auto;
+  width: 300px;
+  height: auto;
 }
 
 /* Remove the previous float: right and adjust spacing */
@@ -148,15 +152,20 @@ body {
 }
 
 .social-btn.twitter {
-  background: #4d0505;
+  background: #000000;
   display: flex;
   align-items: center;
   justify-content: center;
+  /* make the X logo transparent */
+  /* mix-blend-mode: difference; */
+  
 }
 
 .social-btn.twitter i {
   font-size: 14px;  /* Slightly smaller size for X logo */
   font-weight: bold;  /* Make the X more visible */
+  /* make the X logo transparent */
+  /* mix-blend-mode: difference; */
 }
 
 .social-btn.twitter:hover {
@@ -179,3 +188,21 @@ body {
 .social-btn:first-child {
   background: #003366;
 } 
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+
+.logo {
+margin-left: 10px;
+height: 0;
+}
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
