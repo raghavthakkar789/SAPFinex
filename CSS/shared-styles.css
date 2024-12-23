@@ -214,3 +214,26 @@ height: 0;
   line-height: 1;
   text-align: center;
 }
+
+/* Add these styles in the <style> section */
+.nav-links a:hover,
+.nav-links a:active,
+.nav-links a:focus,
+.nav-links .active {
+  color: red !important;
+  text-decoration: none;
+}
+
+/* Also style the social links */
+.social-links a:hover,
+.social-links a:active,
+.social-links a:focus,
+.social-links .active {
+  color: red !important;
+}
+
+/* For currently active page */
+.nav-links a.active {
+  color: red;
+}
+

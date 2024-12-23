@@ -68,9 +68,33 @@
     /* the text should be in the center of the screen */
   }
 
+  /* Existing hero styling omitted for brevity */
+
+/* Position or size the hero image as needed */
+.hero-image {
+  width: 100%;       /* or a fixed width if you prefer */
+  height: auto;
+  display: block;    /* ensure it’s treated as a block-level element */
+  transition: opacity 0.3s ease;
+}
+
+/* Define the "blink" animation (0.5s is just an example) */
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+/* When .blink is added, run the animation once */
+.blink {
+  animation: blink 0.5s ease-in-out forwards;
+  /* Add !important to ensure the animation takes precedence */
+  animation-play-state: running !important;
+}
 
 
 </style>
+
 <body>
   <!-- Navigation -->
   <header>
@@ -121,6 +145,7 @@
 
   <!-- Hero Section -->
   <div class="hero">
+    <img id="heroImage" class="hero-image" src="./CSS/hero-background.jpg" alt="Hero Background">
     <button class="arrow prev-arrow" onclick="prevText()">
       <i class="fas fa-chevron-left"></i>
     </button>
@@ -196,6 +221,16 @@
 <script>
   const texts = document.querySelectorAll('.sliding-text h2');
   let currentText = 0;
+  const heroImage = document.getElementById('heroImage');
+
+  function triggerImageBlink() {
+    const heroImage = document.getElementById('heroImage');
+    if (heroImage) {
+      heroImage.classList.remove('blink');
+      void heroImage.offsetWidth;
+      heroImage.classList.add('blink');
+    }
+  }
 
   function showText(index) {
     texts.forEach(text => text.style.display = 'none');
@@ -205,17 +240,32 @@
   function nextText() {
     currentText = (currentText + 1) % texts.length;
     showText(currentText);
+    triggerImageBlink();
   }
 
   function prevText() {
     currentText = (currentText - 1 + texts.length) % texts.length;
     showText(currentText);
+    triggerImageBlink();
   }
 
-  // Initial display
   showText(currentText);
-
-  // Auto-slide every 3.5 seconds
   var textInterval = setInterval(nextText, 3500);
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get current page URL
+    const currentPage = window.location.pathname;
+    
+    // Find all nav links
+    const navLinks = document.querySelectorAll('.nav-links a');
+    
+    // Add active class to current page link
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+        }
+    });
+  });
 </script>
+
 </html>
