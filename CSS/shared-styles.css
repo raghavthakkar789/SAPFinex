@@ -103,7 +103,7 @@ body {
 .company-logo {
   width: 350px;
   height: auto;
-  transform: translatey(-73px);
+  transform: translatey(-75px);
   /* transform: translatex(-50px); */
 }
 
