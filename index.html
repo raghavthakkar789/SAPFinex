@@ -252,20 +252,28 @@
   showText(currentText);
   var textInterval = setInterval(nextText, 3500);
 
-  document.addEventListener('DOMContentLoaded', function() {
-    // Get current page URL
-    const currentPage = window.location.pathname;
-    
-    // Find all nav links
-    const navLinks = document.querySelectorAll('.nav-links a');
-    
-    // Add active class to current page link
-    navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPage) {
-            link.classList.add('active');
-        }
-    });
-  });
+  var heroImageSlider = function($) {
+        $('#hero-image').addClass('hero-background');
+        $('#hero-image').hero-background({
+            slideshowSpeed: 3000,
+            animation: "fade",
+            controlNav: false,
+            directionNav: true,
+            pauseOnHover: true,
+            direction: "horizontal",
+            reverse: false,
+            animationSpeed: 600,
+            prevText: "Previous",
+            nextText: "Next",
+            fadeFirstSlide: 1,
+            slideshow: true
+        });
+        $(document).trigger('metaslider/initialized', '#hero-image');
+    };
+    var timerHeroImage = function() {
+        var slider = !window.jQuery ? window.setTimeout(timerHeroImage, 100) : !jQuery.isReady ? window.setTimeout(timerHeroImage, 1) : heroImageSlider(window.jQuery);
+    };
+    timerHeroImage();
 </script>
 
 </html>
