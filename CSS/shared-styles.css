@@ -2,6 +2,7 @@
   height: .01%;
   width: auto;
   display: block;
+  margin-top: 0px;
 } 
 
 .contact-info {
@@ -15,6 +16,13 @@
   /* margin-left: auto; */
   text-align: right;
   width: 200%;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  justify-content: right;
 }
 
 .contact-info .phone-icon,
@@ -78,6 +86,7 @@ body {
   display: flex;
   align-items: center;
   gap: 5px;  /* Adds consistent spacing between elements */
+  justify-content: flex-end;
 }
 
 .navbar {
@@ -94,6 +103,7 @@ body {
 .company-logo {
   width: 300px;
   height: auto;
+  transform: translatey(-45px);
 }
 
 /* Remove the previous float: right and adjust spacing */
@@ -188,23 +198,13 @@ body {
   background: #003366;
 } 
 
-.contact-info {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  justify-content: space-between;
-}
+
 
 .logo {
 margin-left: 10px;
 height: 0;
 }
-.contact-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
+
 
 .x-logo {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;

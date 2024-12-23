@@ -79,11 +79,6 @@
 }
 
 /* Define the "blink" animation (0.5s is just an example) */
-@keyframes blink {
-  0% { opacity: 1; }
-  50% { opacity: 0.3; }
-  100% { opacity: 1; }
-}
 
 /* When .blink is added, run the animation once */
 .blink {
@@ -92,6 +87,11 @@
   animation-play-state: running !important;
 }
 
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
 
 </style>
 
@@ -99,10 +99,10 @@
   <!-- Navigation -->
   <header>
     <div class="top-bar">
+      <div class="logo">
+        <img src="./CSS/logo.png" alt="SAPfinex Logo" class="company-logo">
+      </div>
       <div class="contact-info">
-        <div class="logo">
-          <img src="./CSS/logo.png" alt="SAPfinex Logo" class="company-logo">
-        </div>
         <div>
           <img src="./CSS/phone_logo.svg" alt="Phone" class="phone-icon">
           <span><font color="black">+1 917 672 6721</font></span>
