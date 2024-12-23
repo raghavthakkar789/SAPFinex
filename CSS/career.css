@@ -31,6 +31,8 @@
   .nav-links {
     list-style: none;
     display: flex;
+    gap: 30px;
+    margin-top: 30px;
   }
   .nav-links li {
     margin-left: 1.5rem;
@@ -243,7 +245,8 @@
   
   /* Resume upload section styling */
   .resume-upload-section {
-    margin: 2rem 0;
+    margin: 0;
+    flex: 1;
     padding: 1rem;
     background: #f8f9fa;
     border-radius: 4px;
@@ -271,6 +274,7 @@
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    white-space: nowrap;
   }
   
   .resume-upload-btn:hover {
@@ -280,5 +284,52 @@
   #file-chosen {
     color: #666;
     font-size: 0.9rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 200px;
+  }
+  
+  /* Updated button container styling */
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  /* Update submit button */
+  .submit-btn {
+    background: #003366;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex: 1;
+    white-space: nowrap;
+  }
+  
+  /* Hover effects */
+  .resume-upload-btn:hover,
+  .submit-btn:hover {
+    background: #002347;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .button-container {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .submit-btn,
+    .resume-upload-section {
+      width: 100%;
+    }
   }
   
