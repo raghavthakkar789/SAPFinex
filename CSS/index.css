@@ -131,6 +131,12 @@
     line-height: 1.8;
     color: #444;
   }
+
+  .services ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    color: darkblue;
+  }
   
   /* ----- Footer ----- */
   /* footer {
