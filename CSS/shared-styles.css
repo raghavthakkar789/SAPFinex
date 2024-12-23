@@ -1,3 +1,24 @@
+/* Import statements must come first */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+
+/* Then reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Rest of your styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #333;
+    background-color: #DFE5DC;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .navbar .logo img {
   height: .01%;
   width: auto;
@@ -108,9 +129,6 @@ body {
   margin: 0 10px;  /* Adds space around the separator */
 } 
 
-/* Add this in your head section of HTML for FontAwesome icons */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
-
 .top-bar {
   display: flex;
   justify-content: space-between;
@@ -205,4 +223,134 @@ height: 0;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
+}
+
+/* Mobile-friendly styles */
+@media (max-width: 768px) {
+  /* Header adjustments */
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .contact-info .logo {
+    margin-bottom: 10px;
+  }
+
+  .contact-info div:last-child {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  /* Navigation adjustments */
+  .navbar {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .nav-links li {
+    margin: 0;
+  }
+
+  /* Social links adjustments */
+  .social-links {
+    margin-top: 15px;
+    justify-content: center;
+  }
+
+  /* Hero section adjustments */
+  .about-hero,
+  .contact-hero,
+  .insight-hero,
+  .services-intro {
+    margin-top: 120px;
+    padding: 2rem 1rem;
+    min-height: 200px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  /* Further reduce sizes */
+  .contact-info div:last-child {
+    font-size: 11px;
+  }
+
+  .social-links {
+    gap: 8px;
+  }
+
+  .social-btn {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Form adjustments */
+  .form-wrapper {
+    padding: 1.5rem;
+  }
+
+  .button-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .resume-upload-btn,
+  .submit-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Footer adjustments */
+  .footer-content {
+    gap: 30px;
+  }
+
+  .footer-section {
+    min-width: 100%;
+    padding: 0 15px;
+  }
+}
+
+/* Navigation toggle for mobile */
+.nav-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  /* mix-blend-mode: difference; */
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
 }
