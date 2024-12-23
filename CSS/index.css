@@ -14,7 +14,7 @@
   
   /* ----- Navbar ----- */
   header {
-    background: #003366;
+    background: #ffffff;
     color: #fff;
     position: fixed;
     width: 100%;
@@ -42,7 +42,7 @@
     margin-left: 1.5rem;
   }
   .nav-links a {
-    color: #fff;
+    color: #010510;
     text-decoration: none;
     font-weight: 500;
   }
@@ -85,6 +85,7 @@
     position: relative;
     z-index: 2;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for better readability */
+    /* font-size: 70px; */
   }
   .hero h1 {
     margin-bottom: 1rem;
@@ -93,6 +94,7 @@
   .hero h2 {
     margin: 0.5rem 0;
     font-weight: normal;
+    font-size: 5rem;
   }
   .company-intro{
     h2{
@@ -101,7 +103,7 @@
       padding: 2rem;
       font-size: 1.5rem;
       font-weight: bold;
-      color: #003366;
+      color: #010510;
     }
   }
 

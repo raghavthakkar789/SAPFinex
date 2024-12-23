@@ -15,8 +15,8 @@
   
   /* ----- Navbar ----- */
   header {
-    background: #003366;
-    color: #fff;
+    background: #ffffff;
+    color: #010510;
   }
   .navbar {
     display: flex;
@@ -31,12 +31,13 @@
   .nav-links {
     list-style: none;
     display: flex;
+
   }
   .nav-links li {
     margin-left: 1.5rem;
   }
   .nav-links a {
-    color: #fff;
+    color: #010510;
     text-decoration: none;
     font-weight: 500;
   }
@@ -128,7 +129,7 @@
   }
   
   .mission-vision h2 {
-    color: #003366;
+    color: #000c18;
     margin-bottom: 1.5rem;
     font-size: 1.8rem;
     border-bottom: 2px solid #003366;
@@ -215,4 +216,5 @@
     padding-top: 20px;
     border-top: 1px solid #555;
   }
+
   

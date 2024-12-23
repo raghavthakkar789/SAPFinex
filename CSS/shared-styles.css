@@ -148,7 +148,19 @@ body {
 }
 
 .social-btn.twitter {
-  background: #000000;
+  background: #4d0505;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-btn.twitter i {
+  font-size: 14px;  /* Slightly smaller size for X logo */
+  font-weight: bold;  /* Make the X more visible */
+}
+
+.social-btn.twitter:hover {
+  background: #333333;  /* Lighter black on hover */
 }
 
 .social-btn.youtube {

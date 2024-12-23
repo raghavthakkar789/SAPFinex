@@ -13,8 +13,8 @@
   
   /* ----- Navbar ----- */
   header {
-    background: #003366;
-    color: #fff;
+    background: rgb(255, 255, 255);
+    color: #010510;
     position: fixed;
     width: 100%;
     top: 0;
@@ -40,7 +40,7 @@
     margin-left: 1.5rem;
   }
   .nav-links a {
-    color: #fff;
+    color: #010510;
     text-decoration: none;
     font-weight: 500;
   }
@@ -114,7 +114,7 @@
   }
   .service-category h2 {
     margin-bottom: 1.5rem;
-    color: #003366;
+    color: #000c18;
     font-size: 2rem;
     border-bottom: 2px solid #003366;
     padding-bottom: 0.5rem;
