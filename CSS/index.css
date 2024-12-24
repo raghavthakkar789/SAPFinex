@@ -58,14 +58,12 @@
   /* ----- Hero Section ----- */
   .hero {
     position: relative;
-    text-align: center;
-    padding: 4rem 1rem;
-    padding-top: calc(4rem + 120px);
+    /* text-align: center; */
+    min-height: 60vh;
+    padding-top: var(--header-height);
     background: url('./hero_background.jpg') no-repeat center/cover;
     color: #fff;
-    /* margin-bottom: 0; */
-    margin-top: 100px;
-    height: 60vh;
+    margin-top: 230px;
   }
 
   /* Add overlay to darken the background */
@@ -169,9 +167,11 @@
     }
     .nav-toggle {
       display: block;
+      mix-blend-mode: difference;
     }
     .hero {
-      padding: 2rem 1rem;
+      min-height: 50vh;
+      padding-top: 2rem 1rem;
     }
     .hero h1 {
       font-size: 1.5rem;
@@ -287,5 +287,66 @@ li {
   /* .hero {
     position: relative;
   } */
+  
+  .sliding-text {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .sliding-text h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    line-height: 1.4;
+  }
+
+  /* Main content */
+  .content-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* Responsive grid */
+  .grid-container {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  /* Navigation arrows */
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .hero {
+      min-height: 50vh;
+      padding-top: var(--header-height-mobile);
+    }
+
+    .sliding-text {
+      padding: 20px;
+    }
+
+    .arrow {
+      width: 30px;
+      height: 30px;
+    }
+
+    .content-section {
+      padding: 40px 20px;
+    }
+  }
   
   

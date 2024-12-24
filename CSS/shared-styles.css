@@ -1,9 +1,46 @@
+/* Base responsive styles */
+:root {
+  --header-height: 120px;
+  --header-height-mobile: 80px;
+}
+
 .navbar .logo img {
   height: .01%;
   width: auto;
   display: block;
   margin-top: 0px;
 } 
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styles */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background: #ffffff;
+  /* padding: 10px 20px; */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo img {
+  width: 300px;
+  height: auto;
+  margin-bottom: 0px;
+}
 
 .contact-info {
   /* background: #ecf0f3; */
@@ -21,7 +58,7 @@
 .contact-info {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  gap: 10px;
   justify-content: right;
 }
 
@@ -33,81 +70,6 @@
   mix-blend-mode: difference;
 }
 
-.contact-info .separator {
-  margin: 0 15px;
-}
-
-/* Adjust the header padding to account for the new contact info bar */
-.navbar {
-  padding: 0.8rem 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* Make header position relative for proper stacking */
-header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  padding: 10px 20px;
-}
-
-.hero {
-  position: relative;
-  text-align: center;
-  padding: 4rem 1rem;
-  padding-top: calc(4rem + 120px);
-  background: url('./hero_background.jpg') no-repeat center/cover;
-  color: #fff;
-  /* margin-bottom: 0; */
-  margin-top: 100px;
-  height: 50vh;
-}
-
-/* Adjust body padding to account for the taller header */
-body {
-  padding-top: 100px;
-}
-
-@media (max-width: 768px) {
-  .contact-info {
-    display: none; /* Hide on mobile or adjust layout as needed */
-  }
-  
-  body {
-    padding-top: 60px;
-  }
-} 
-
-.contact-info > div {
-  display: flex;
-  align-items: center;
-  gap: 5px;  /* Adds consistent spacing between elements */
-  justify-content: flex-end;
-}
-
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 10px;
-  margin-top: 10px;
-  /* Space after contact info */
-  /* border-top: 1px solid #eee;  Optional: adds a subtle line between sections */
-}
-
-
-.company-logo {
-  width: 350px;
-  height: auto;
-  transform: translatey(-75px);
-  /* transform: translatex(-50px); */
-}
-
-/* Remove the previous float: right and adjust spacing */
 .phone-icon,
 .email-icon {
   height: 16px;
@@ -115,12 +77,39 @@ body {
   vertical-align: middle;  /* Ensures icons align with text */
 }
 
-.separator {
-  margin: 0 10px;  /* Adds space around the separator */
+.contact-info .separator {
+  margin: 0 15px;
+  mix-blend-mode: difference;
+}
+
+.contact-info > div {
+  display: flex;
+  align-items: center;
+  gap: 5px;  /* Adds consistent spacing between elements */
+  justify-content: flex-end;
 } 
 
-/* Add this in your head section of HTML for FontAwesome icons */
+.navbar {
+  padding: 0.8rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin-top: 0px;
+  margin-left: 400px;
+}
+
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+.social-links {
+  display: flex;
+  gap: 10px;
+}
 
 .top-bar {
   display: flex;
@@ -130,12 +119,6 @@ body {
   /* background-color: #f8f9fa; */
 }
 
-.social-links {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
-
 .social-btn {
   display: flex;
   align-items: center;
@@ -143,9 +126,10 @@ body {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  color: white;
+  /* color: white; */
   text-decoration: none;
   transition: all 0.3s ease;
+  margin-left: 5px;
 }
 
 .social-btn:hover {
@@ -153,88 +137,77 @@ body {
   opacity: 0.9;
 }
 
-/* Specific brand colors */
-.social-btn.home {
-  background: #003366;
-}
-
-.social-btn.linkedin {
-  background: #0077b5;
-}
-
-.social-btn.twitter {
-  background: #000000;
+.social-links {
   display: flex;
+  gap: 12px;
   align-items: center;
-  justify-content: center;
 }
 
-.social-btn.twitter i {
-  font-size: 14px;  /* Slightly smaller size for X logo */
-  font-weight: bold;  /* Make the X more visible */
-  /* make the X logo transparent */
-  /* mix-blend-mode: difference; */
+/* Mobile navigation */
+.nav-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
 }
 
-.social-btn.twitter:hover {
-  background: #333333;
+.social-btn:hover {
   transform: translateY(-2px);
-  transition: all 0.3s ease;
+  opacity: 0.9;
 }
 
-.social-btn.youtube {
-  background: #ff0000;
+/* .navbar,
+.hero::before {
+  padding: 0%;
+} */
+/* Responsive breakpoints */
+@media (max-width: 1200px) {
+  .nav-links {
+    gap: 20px;
+  }
 }
 
-.social-btn.feedback {
-  background: #0056b3;
+@media (max-width: 992px) {
+  .contact-info {
+    font-size: 12px;
+  }
 }
 
-.social-btn i {
-  font-size: 16px;
-}
+@media (max-width: 768px) {
+  :root {
+    --header-height: var(--header-height-mobile);
+  }
 
-/* Home icon */
-.social-btn:first-child {
-  background: #003366;
-} 
+  .top-bar {
+    flex-direction: column;
+  }
 
+  .contact-info {
+    display: none;
+  }
 
+  .nav-toggle {
+    display: block;
+  }
 
-.logo {
-margin-left: 10px;
-height: 0;
-}
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
 
+  .nav-links.open {
+    display: flex;
+  }
 
-.x-logo {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-  color: white;
-  line-height: 1;
-  text-align: center;
-}
-
-/* Add these styles in the <style> section */
-.nav-links a:hover,
-.nav-links a:active,
-.nav-links a:focus,
-.nav-links .active {
-  color: red !important;
-  text-decoration: none;
-}
-
-/* Also style the social links */
-.social-links a:hover,
-.social-links a:active,
-.social-links a:focus,
-.social-links .active {
-  color: red !important;
-}
-
-/* For currently active page */
-.nav-links a.active {
-  color: red;
+  .social-links {
+    justify-content: center;
+    margin-top: 10px;
+  }
 }
 
