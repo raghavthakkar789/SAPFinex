@@ -111,6 +111,9 @@
     margin-bottom: 1.5rem;
     line-height: 1.8;
     color: #444;
+    text-align: justify; /* Justifies the text */
+    margin: 20px; /* Adds some spacing around the paragraph */
+    width: 95%; /* Restricts width for better visualization */
   }
   
   /* ----- Mission & Vision ----- */
@@ -143,6 +146,7 @@
     line-height: 1.8;
     color: #444;
     text-align: left;
+    text-align: justify;
   }
   
   /* ----- Footer Adjustments ----- */
