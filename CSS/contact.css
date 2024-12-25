@@ -1,58 +1,4 @@
-/* ----- Basic Reset & Font ----- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  body {
-    font-family: Arial, sans-serif;
-    color: #333;
-    background-color: #f9f9f9;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* ----- Navbar ----- */
-  header {
-    background: #ffffff;
-    color: #010510;
-  }
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-  }
-  .navbar .logo {
-    font-weight: bold;
-    font-size: 1.25rem;
-  }
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    margin-top: 0px;
-    margin-left: 400px;
-  }
-  .nav-links li {
-    margin-left: 1.5rem;
-  }
-  .nav-links a {
-    color: #010510;
-    text-decoration: none;
-    font-weight: 500;
-  }
-  .nav-links a.active {
-    text-decoration: underline;
-  }
-  .nav-toggle {
-    display: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-  }
-  
-  /* ----- Contact Hero ----- */
+    /* ----- Contact Hero ----- */
   .contact-hero {
     padding: 4rem 2rem;
     position: relative;
@@ -167,29 +113,6 @@
   
   /* ----- Responsive Styles ----- */
   @media (max-width: 768px) {
-    .nav-links {
-      position: absolute;
-      top: 60px;
-      right: 0;
-      background: #003366;
-      width: 200px;
-      height: 0;
-      overflow: hidden;
-      flex-direction: column;
-      transition: 0.3s ease;
-    }
-    .nav-links.open {
-      height: auto;
-      padding: 1rem 0;
-    }
-    .nav-links li {
-      margin: 0.5rem 0;
-      text-align: center;
-    }
-    .nav-toggle {
-      display: block;
-    }
-
     .contact-hero {
       padding: 3rem 1rem;
       margin-top: 155 px;
