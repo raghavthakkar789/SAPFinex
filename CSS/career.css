@@ -51,8 +51,8 @@
     font-size: 1.5rem;
   }
   
-  /* ----- Contact Hero ----- */
-  .contact-hero {
+  /* ----- career Hero ----- */
+  .career-hero {
     padding: 4rem 2rem;
     position: relative;
     text-align: center;
@@ -63,7 +63,7 @@
     margin-top: 100px;
   }
   
-  .contact-hero::before {
+  .career-hero::before {
     content: '';
     position: absolute;
     top: 0;
@@ -73,20 +73,20 @@
     background: linear-gradient(to right, rgba(0, 35, 71, 0.9), rgba(0, 51, 102, 0.85));
   }
   
-  .contact-hero h1,
-  .contact-hero p {
+  .career-hero h1,
+  .career-hero p {
     position: relative;
     z-index: 2;
   }
   
-  .contact-hero h1 {
+  .career-hero h1 {
     margin-bottom: 1.5rem;
     font-size: 2.8rem;
     font-weight: 600;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   }
   
-  .contact-hero p {
+  .career-hero p {
     font-size: 1.3rem;
     max-width: 800px;
     margin: 0 auto;
@@ -94,8 +94,8 @@
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   }
   
-  /* ----- Contact Form Section ----- */
-  .contact-form-section {
+  /* ----- career Form Section ----- */
+  .career-form-section {
     max-width: 800px;
     margin: 3rem auto;
     padding: 0 2rem;
@@ -166,13 +166,13 @@
   
   /* ----- Responsive Styles ----- */
   @media (max-width: 768px) {
-    .contact-hero {
+    .career-hero {
       padding: 3rem 1rem;
     }
-    .contact-hero h1 {
+    .career-hero h1 {
       font-size: 2.2rem;
     }
-    .contact-hero p {
+    .career-hero p {
       font-size: 1.1rem;
     }
     .form-wrapper {
@@ -184,11 +184,13 @@
   footer {
     text-align: center;
     padding: 1rem;
-    background: #eaeaea;
+    background: #333;
     margin-top: 2rem;
   }
   
   .footer-content {
+    background-color: #333;
+    color: #eaeaea;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -202,6 +204,7 @@
     min-width: 300px;
     padding: 0 20px;
     text-align: left;
+    color: #333;
   }
   
   .footer-section h3 {
@@ -367,9 +370,32 @@
   }
   
   @media (max-width: 768px) {
+    .nav-links {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background: #003366;
+      width: 200px;
+      height: 0;
+      overflow: hidden;
+      flex-direction: column;
+      transition: 0.3s ease;
+    }
+    .nav-links.open {
+      height: auto;
+      padding: 1rem 0;
+    }
+    .nav-links li {
+      margin: 0.5rem 0;
+      text-align: center;
+    }
+    .nav-toggle {
+      display: block;
+    }
     .career-hero {
       padding-top: var(--header-height-mobile);
       min-height: 40vh;
+      margin-top: 92px;
     }
     
     .job-listings {

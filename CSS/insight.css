@@ -167,6 +167,9 @@
     .insight-content {
       grid-template-columns: 1fr;
     }
+    .insight-hero {
+      margin-top: 92px;
+    }
   }
     /* Footer Styles */
     footer {
