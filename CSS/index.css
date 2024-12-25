@@ -1,59 +1,4 @@
-/* ----- Basic Reset & Font ----- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  body {
-    font-family: Arial, sans-serif;
-    color: #333;
-    line-height: 1.6;
-    background-color: #fdfdfd;
-    padding-top: 0;
-  }
-  
-  /* ----- Navbar ----- */
-  header {
-    background: #ffffff;
-    color: #fff;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    /* width: 100%; */
-}
-  .navbar .logo {
-    font-weight: bold;
-    font-size: 1.25rem;
-  }
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    margin-top: 0px;
-    margin-left: 400px;
-  }
-  .nav-links li {
-    margin-left: 1.5rem;
-  }
-  .nav-links a {
-    color: #010510;
-    text-decoration: none;
-    font-weight: 500;
-  }
-  .nav-toggle {
-    display: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-  }
+
   
   /* ----- Hero Section ----- */
   .hero {
@@ -136,40 +81,8 @@
     color: darkblue;
   }
   
-  /* ----- Footer ----- */
-  /* footer {
-    text-align: center;
-    padding: 1rem;
-    /* background: #eaeaea; */
-    /* margin-top: 0;
-  } */ 
-  
   /* ----- Responsive Styles ----- */
   @media (max-width: 768px) {
-    .nav-links {
-      position: absolute;
-      top: 60px;
-      right: 0;
-      background: #003366;
-      width: 200px;
-      height: 0;
-      overflow: hidden;
-      flex-direction: column;
-      transition: 0.3s ease;
-    }
-    .nav-links.open {
-      height: auto;
-      padding: 1rem 0;
-    }
-    .nav-links li {
-      margin: 0.5rem 0;
-      text-align: center;
-    }
-    .nav-toggle {
-      display: block;
-      mix-blend-mode: difference;
-
-    }
 
       /* Add overlay to darken the background */
   .hero::before {
@@ -200,56 +113,6 @@
 
 
 
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    margin-bottom: 10px;
-}
-    /* Footer Styles */
-    footer {
-      background-color: #333;
-      color: white;
-      padding: 40px 0;
-      width: 100%;
-      text-align: center;
-    }
-  
-    .footer-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 100px;
-    }
-  
-    .footer-section {
-      flex: 0 1 auto;
-      min-width: 300px;
-      padding: 0 20px;
-      text-align: left;
-    }
-  
-    .footer-section h3 {
-      margin-bottom: 15px;
-      font-size: 18px;
-    }
-  
-    .footer-section p {
-      margin: 5px 0;
-      font-size: 14px;
-      line-height: 1.5;
-    }
-  
-    .footer-bottom {
-      text-align: center;
-      margin-top: 20px;
-      padding-top: 20px;
-      border-top: 1px solid #555;
-    }
 
   /* Update the company-intro section styles */
   #company-intro {
