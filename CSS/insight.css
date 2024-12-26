@@ -141,7 +141,7 @@
   }
   
   /* ----- Responsive Styles ----- */
-  @media (max-width: 768px) {
+  @media (max-width: 768px) and (min-width: 480px) {
     .nav-links {
       position: absolute;
       top: 60px;
@@ -153,29 +153,11 @@
       flex-direction: column;
       transition: 0.3s ease;
     }
-    .nav-links.open {
-      height: auto;
-      padding: 1rem 0;
-    }
-    .nav-links li {
-      margin: 0.5rem 0;
-      text-align: center;
-    }
-    .nav-toggle {
-      display: block;
-    }
-  
-    .insight-content {
-      grid-template-columns: 1fr;
-    }
-    .insight-hero {
-      margin-top: 92px;
-    }
   }
 
   @media (max-width: 480px) {
 
-    .hero::before {
+    .insight-hero::before {
       content: '';
       position: absolute;
       top: 0;
@@ -185,10 +167,10 @@
       background-color: rgba(0, 0, 0, 0.5); /* Adjust the last value (0.5) for darkness level */
     }
   
-    .hero {
-      min-height: 70vh;
-      padding-top: 2rem 1rem;
-      margin-top: 95px;
+    .insight-hero {
+      min-height: 50vh;
+      padding: 2rem 1rem;
+      margin-top: 220px;
       text-align: center;
     }
   }
