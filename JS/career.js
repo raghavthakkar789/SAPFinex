@@ -7,8 +7,8 @@ navToggle.addEventListener("click", () => {
 });
 
 // Simple example form handling
-const contactForm = document.getElementById('contactForm');
-contactForm.addEventListener('submit', (event) => {
+const careerForm = document.getElementById('careerForm');
+careerForm.addEventListener('submit', (event) => {
   event.preventDefault();
   const nameValue = document.getElementById('name').value.trim();
   const emailValue = document.getElementById('email').value.trim();
@@ -16,7 +16,7 @@ contactForm.addEventListener('submit', (event) => {
 
   if (nameValue && emailValue && messageValue) {
     alert('Thank you for contacting us! We will get back to you soon.');
-    contactForm.reset();
+    careerForm.reset();
   } else {
     alert('Please fill in all required fields.');
   }
