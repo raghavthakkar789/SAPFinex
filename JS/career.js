@@ -12,9 +12,27 @@ careerForm.addEventListener('submit', (event) => {
   event.preventDefault();
   const nameValue = document.getElementById('name').value.trim();
   const emailValue = document.getElementById('email').value.trim();
+  const phoneValue = document.getElementById('phone').value.trim();
   const messageValue = document.getElementById('message').value.trim();
+  const resumeValue = document.getElementById('resume').value.trim();
 
-  if (nameValue && emailValue && messageValue) {
+  if (nameValue && emailValue && phoneValue && messageValue && resumeValue) {
+    const formData = {
+      name: nameValue,
+      email: emailValue,
+      phone: phoneValue,
+      message: messageValue,
+      resume: resumeValue
+    };
+    console.log(formData);
+    const url = 'https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTZmMDYzMDA0M2Q1MjZlNTUzNzUxMzIi_pc';
+    fetch(url, {
+      method: 'POST',
+      body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
     alert('Thank you for contacting us! We will get back to you soon.');
     careerForm.reset();
   } else {
