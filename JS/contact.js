@@ -13,15 +13,17 @@ contactForm.addEventListener('submit', (event) => {
   const nameValue = document.getElementById('name').value.trim();
   const emailValue = document.getElementById('email').value.trim();
   const phoneValue = document.getElementById('phone').value.trim();
+  const organizationValue = document.getElementById('organization').value.trim();
   const messageValue = document.getElementById('message').value.trim();
 
-  if (nameValue && emailValue && phoneValue && messageValue) {
+  if (nameValue && emailValue && phoneValue && organizationValue && messageValue) {
     // Send the form data to the https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTZmMDYzMzA0MzE1MjZiNTUzNDUxMzUi_pc
     // const formData = new FormData();
     const formData = {
       name: nameValue,
       email: emailValue,
       phone: phoneValue,
+      organization: organizationValue,
       message: messageValue
     };
     console.log(formData);
